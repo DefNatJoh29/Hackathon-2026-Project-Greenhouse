@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dd31gqu4eg2cp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkdm5"]
+size = Vector2(933, 613)
+
+[node name="GardenBed" type="Node2D" unique_id=900355693]
+
+[node name="GardenBed" type="Area2D" parent="." unique_id=1336381734]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GardenBed" unique_id=511426277]
+position = Vector2(512, 320)
+shape = SubResource("RectangleShape2D_qkdm5")
+
+[node name="Sprite2D" type="Sprite2D" parent="GardenBed/CollisionShape2D" unique_id=97392100]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfrgm50yxowq1"
-path="res://.godot/imported/Screenshot 2026-04-18 095728.png-7d61de6450790fdb2f7140f53e83c36c.ctex"
+path="res://.godot/imported/Screenshot 2026-04-18 095728.png-37cb7a10cee2d4bcd85d38a4b17b9d80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Hackathon-2026-Project-Greenhouse-main/GardenSprites/Screenshot 2026-04-18 095728.png"
-dest_files=["res://.godot/imported/Screenshot 2026-04-18 095728.png-7d61de6450790fdb2f7140f53e83c36c.ctex"]
+source_file="res://GardenSprites/Screenshot 2026-04-18 095728.png"
+dest_files=["res://.godot/imported/Screenshot 2026-04-18 095728.png-37cb7a10cee2d4bcd85d38a4b17b9d80.ctex"]
 
 [params]
 
