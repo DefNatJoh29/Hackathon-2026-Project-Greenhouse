@@ -1,3 +1,60 @@
 [gd_scene format=3 uid="uid://xnig43pfeyhm"]
 
+[ext_resource type="Script" uid="uid://bf0w13x386v3w" path="res://path_2d.gd" id="2_0hol4"]
+[ext_resource type="PackedScene" uid="uid://b0k6bcc2hxfdo" path="res://enemy_spawn.tscn" id="3_0hol4"]
+[ext_resource type="Script" uid="uid://cxe50jaoigunx" path="res://timer.gd" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://bb0eeqxmlmlv2" path="res://attacker.tscn" id="3_q6r6c"]
+
+[sub_resource type="Curve2D" id="Curve2D_rj586"]
+bake_interval = 0.01
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -18.962854, 641.8338, 0, 0, 0, 0, 12.136227, 263.61032, 0, 0, 0, 0, 40.20125, 471.82425, 0, 0, 0, 0, 80.78176, 548.2331, 0, 0, 0, 0, 125.534096, 526.26556, 0, 0, 0, 0, 113.397865, 424.06876, 0, 0, 0, 0, 36.787933, 255.96944, 0, 0, 0, 0, 37.16719, 67.8128, 0, 0, 0, 0, 87.60839, 156.63802, 0, 0, 0, 0, 115.67341, 345.74976, 0, 0, 0, 0, 137.29106, 23.877747, 0, 0, 0, 0, 178.25082, 194.8424, 0, 0, 0, 0, 154.35762, 323.78223, -1.4173946, 198.97812, 1.4173946, -198.97812, 196.83443, 306.59024)
+}
+point_count = 14
+
 [node name="Node2D" type="Node2D" unique_id=1159020261]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1518301465]
+position = Vector2(11, -618)
+
+[node name="Line2D5" type="Line2D" parent="Node2D" unique_id=1959495835]
+position = Vector2(14, 4)
+scale = Vector2(2.044597, 1)
+points = PackedVector2Array(550, 624, -12, 625, -9, 1267, 550, 1266, 551, 626)
+
+[node name="Line2D" type="Line2D" parent="Node2D" unique_id=1829771008]
+position = Vector2(575, 8)
+points = PackedVector2Array(-11, 622, -11, 1259)
+width = 15.0
+default_color = Color(0, 1, 0, 1)
+
+[node name="Line2D2" type="Line2D" parent="Node2D" unique_id=927314909]
+position = Vector2(8.6603775, -3.8521729)
+scale = Vector2(0.98456264, 1.0030166)
+points = PackedVector2Array(550, 624, -12, 625, -9, 1267, 567.09406, 1264.0391, 558.9686, 626.9609)
+
+[node name="Line2D7" type="Line2D" parent="Node2D" unique_id=89693909]
+position = Vector2(5, 8)
+points = PackedVector2Array(-15, 1230, 73, 904, 141, 1094, 245, 1174, 355, 1159, 335, 1046, 139, 884, 136, 694, 271, 774, 337, 955, 400, 648, 500, 812, 449, 948, 504, 1016, 533, 1017)
+
+[node name="Label" type="Label" parent="Node2D" unique_id=622763326]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Node2D2" type="Node2D" parent="Node2D/Label" unique_id=1029261596]
+position = Vector2(-11, 618)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=82320135]
+position = Vector2(52, -9)
+scale = Vector2(2.636734, 1.047)
+curve = SubResource("Curve2D_rj586")
+script = ExtResource("2_0hol4")
+enemy_spawn = ExtResource("3_0hol4")
+attacker = ExtResource("3_q6r6c")
+
+[node name="Timer" type="Timer" parent="." unique_id=1003395482]
+wait_time = 2.09
+autostart = true
+script = ExtResource("3_epypp")
+
+[connection signal="timeout" from="Timer" to="Path2D" method="_on_timer_timeout"]
